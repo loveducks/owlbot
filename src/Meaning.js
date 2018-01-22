@@ -9,11 +9,15 @@ class Meaning extends Component{
     render(){
         return(
             <div className='meaning'>
-                <span className='noun'>{ this.props.type && this.props.type + '.'}</span>
+                <span className='noun'>
+                    { this.props.type && this.props.type + '.'}
+                </span>
                 <h4>
                     {this.props.definition}
                 </h4>
-                <span className='example'>{ this.props.example && 'example: ' + this.props.example}</span>
+                <span className='example'>
+                    { this.props.example && 'example: ' + this.props.example}
+                </span>
             </div>
         );
     }

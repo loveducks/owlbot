@@ -7,7 +7,7 @@ class Define extends Component{
         const { URL } = this.props;
         this.state = {
             word: '',
-            def: null 
+            def: null
         }
     }
 
@@ -27,15 +27,22 @@ class Define extends Component{
         return this.props.URL + '/' + this.state.word + '?format=json' ; 
     }
 
+    handleSubmit(event){
+        event.preventDefault();
+        this.fetchAPI();
+    }
+
     render(){
         return(
-            <div className='form'>
+            <form className='form' onSubmit={this.handleSubmit.bind(this)}>
                 <input type='text' placeholder='Search...' 
+                    value={this.state.word}
                     onChange = { (e) => this.setState({ word: e.target.value }) }
                 />
-                <button onClick={this.fetchAPI.bind(this)}>Go.</button>
+                {/*<button onClick={this.fetchAPI.bind(this)}>Go.</button>*/}
+                <input type='submit' value='Go.' />
                 <Results def={this.state.def} />
-            </div>
+            </form>
         );
     }
 }

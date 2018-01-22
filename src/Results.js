@@ -12,8 +12,13 @@ class Results extends Component{
             <div className='results'>
                 {
                     this.props.def &&
-                    this.props.def.map( (def) => 
-                        <Meaning definition={def.definition} type={def.type} example={def.example} />
+                    this.props.def.map( (def, index) => 
+                    <Meaning 
+                        definition={def.definition} 
+                        type={def.type} 
+                        example={def.example} 
+                        key={index}
+                    />
                     )
                 }
             </div>

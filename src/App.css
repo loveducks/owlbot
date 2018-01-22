@@ -44,18 +44,27 @@ input[type="text"]{
     font-size: 20px;
     text-align: center;
     margin-bottom: 20px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
 }
-.form>button{
+input[type="submit"]{
     border: none;
     padding: 5px;
     font-size: 20px;
     width: 20%;
     box-sizing: border-box;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    background: #e6b68e;
+    color: white;
 }
 .noun{
     font-style: oblique;
     font-weight: bolder;
-    color: #82888a;
+    color: #e6b68e;
+}
+.results{
+    margin-bottom: 20px;
 }
 .meaning{
     padding: 5px 20px;
